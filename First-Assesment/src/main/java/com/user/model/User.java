@@ -12,26 +12,55 @@ public class User  {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	int id;
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getLogin_Status() {
+		return login_Status;
+	}
+	public void setLogin_Status(String login_Status) {
+		this.login_Status = login_Status;
+	}
+
 	String username;
+	String password;
 
 	String firstname;
 	String lastname;
 	String role;
 	String mngrid;
+	String login_Status;
 	
-	public User()
-	{}
 	
 
-	public User(int id, String username, String firstname, String lastname, String role, String mngrid) {
+
+	public User()
+	{}
+	public User(int id, String username, String password, String firstname, String lastname, String role, String mngrid,String login_Status) {
 		super();
 		this.id = id;
 		this.username = username;
+		this.password = password;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.role = role;
 		this.mngrid = mngrid;
+		this.login_Status = login_Status;
 	}
+	
+
+//	public User(int id, String username, String firstname, String lastname, String role, String mngrid) {
+//		super();
+//		this.id = id;
+//		this.username = username;
+//		this.firstname = firstname;
+//		this.lastname = lastname;
+//		this.role = role;
+//		this.mngrid = mngrid;
+//	}
 
 
 //

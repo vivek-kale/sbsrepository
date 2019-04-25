@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -70,6 +71,16 @@ public class UserController {
    
     	}
 
+
+    @RequestMapping(method=RequestMethod.POST ,value="/api/user/login")
+    public User authenticate(@RequestParam(value="username") String username,@RequestParam(value="password") String password)
+    {
+    	
+    	
+    	User user = userService.authenticateUser(username, password);
+    	
+    	return user;
+    }
     
        
     

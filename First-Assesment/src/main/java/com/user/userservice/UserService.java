@@ -14,6 +14,7 @@ public interface UserService {
    public User getoneuser(int id);
    public User updateusr(int id,User user);
    public Collection<User> getuserbymngr(String mngr_id);
+public User authenticateUser(String username, String password);
 
    
 

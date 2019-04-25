@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Login_reg-2
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: vivek
+Implementation-Vendor-Id: com.web.log
+Build-Jdk: 1.8.0_25
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/loginreg
+Created-By: Maven Integration for Eclipse
+

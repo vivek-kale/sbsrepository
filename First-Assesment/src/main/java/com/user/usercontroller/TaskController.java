@@ -28,7 +28,7 @@ public class TaskController {
     @RequestMapping(method=RequestMethod.POST ,value="/api/user/{user_id}/task", consumes="application/json")
     public UserTask createtask(@PathVariable(value = "user_id") int user_id ,@RequestBody UserTask usertask)
     {
-    usertask.setUser(new User(user_id,"","","","",""));
+    usertask.setUser(new User(user_id,"","","","","","",""));
     	
 	 taskService.saveTaskinfo(usertask);
 		return usertask;
@@ -40,7 +40,7 @@ public class TaskController {
     public UserTask updatetask(@PathVariable(value="user_id") int user_id, @PathVariable(value="task_Id") int Id,@RequestBody UserTask usertask)
     {
 		
-    	usertask.setUser(new User(user_id,"","","","",""));
+    	usertask.setUser(new User(user_id,"","","","","","",""));
     	taskService.taskupdate(usertask);
     	return usertask;
     	

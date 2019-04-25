@@ -48,6 +48,28 @@ public Collection<User> getuserbymngr(String mngrid) {
 	return  userRepository.findByMngrid(mngrid);
 }
 
+
+@Override
+public User authenticateUser(String username, String password) {
+	User user=new User();
+	user = userRepository.findByUsername(username);
+    if (user == null) {
+    	user = new User();
+    	user.setUsername(username);
+    	user.setPassword(password);
+    	user.setLogin_Status("user_Not_Found");
+    } else {
+    		if(user.getPassword().equalsIgnoreCase(password)) {
+    			user.setLogin_Status("login_success");
+    		} else
+    		{
+    			user.setLogin_Status("login_fail");
+    		}
+	}
+	// TODO Auto-generated method stub
+	return user;
+}
+
 	
 
 

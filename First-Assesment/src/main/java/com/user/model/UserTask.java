@@ -20,7 +20,7 @@ public UserTask(String id, String taskname, String description, int user_id) {
 	this.id = id;
 	this.taskname = taskname;
 	this.description = description;
-	this.user = new User(user_id,"","","","","");
+	this.user = new User(user_id,"","","","","","","");
 	
 }
 

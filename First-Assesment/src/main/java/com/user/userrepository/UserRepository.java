@@ -21,5 +21,7 @@ User findById(int id);
 @Query(value = "select * from userinfo b where b.mngrid=?1", nativeQuery = true)
 	Collection<User> findByMngrid(String mngrid);
 
+User findByUsername(String username);
+
 	
 }
